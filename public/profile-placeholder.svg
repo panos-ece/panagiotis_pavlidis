@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" role="img" aria-label="Profile photo placeholder">
+  <defs>
+    <linearGradient id="bg" x1="80" x2="560" y1="40" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f2a44"/>
+      <stop offset=".45" stop-color="#0b1727"/>
+      <stop offset="1" stop-color="#052e2b"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="80" x2="560" y1="120" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="760" rx="42" fill="url(#bg)"/>
+  <circle cx="320" cy="300" r="132" fill="#0b1220" stroke="url(#ring)" stroke-width="12"/>
+  <circle cx="320" cy="262" r="58" fill="#d7f9ff"/>
+  <path d="M203 392c22-55 70-86 117-86s95 31 117 86c-29 28-68 45-117 45s-88-17-117-45Z" fill="#d7f9ff"/>
+  <path d="M112 584c44-63 113-101 208-101s164 38 208 101v57H112v-57Z" fill="#101d2f" stroke="#67e8f9" stroke-width="8"/>
+  <path d="M144 635h352" stroke="#5eead4" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+  <path d="M164 126h86M390 126h86M164 674h112M364 674h112" stroke="#67e8f9" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+</svg>

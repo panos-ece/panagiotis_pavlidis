@@ -1,0 +1,433 @@
+---
+import '../styles/global.css';
+
+const basePath = import.meta.env.BASE_URL;
+const assetPath = (path: string) => `${basePath}${basePath.endsWith('/') ? '' : '/'}${path}`;
+
+const navItems = [
+  ['Services', '#services'],
+  ['Proof', '#work'],
+  ['Help', '#help'],
+  ['Stack', '#stack'],
+  ['Credentials', '#credentials'],
+  ['Contact', '#contact'],
+];
+
+const services = [
+  {
+    icon: 'API',
+    title: 'Software architecture and implementation',
+    text: 'Design and delivery of maintainable backend services with clear boundaries, clean APIs, integration paths, testing, and practical ownership models.',
+  },
+  {
+    icon: 'K8s',
+    title: 'Cloud-native delivery',
+    text: 'Containerized services with Docker, Kubernetes, Helm, CI/CD automation, release discipline, and deployment practices that reduce operational uncertainty.',
+  },
+  {
+    icon: 'SYS',
+    title: 'Backend systems across domains',
+    text: 'Engineering support for product, platform, research, and integration-heavy environments where reliability, maintainability, and delivery quality matter.',
+  },
+  {
+    icon: '5G',
+    title: 'Telecom-grade specialization',
+    text: 'Standards-aware backend work for 5G Core concepts, network exposure, CAMARA-style open network APIs, B5G/6G experimentation, and reproducible test platforms.',
+  },
+  {
+    icon: 'AI',
+    title: 'AI-assisted engineering workflows',
+    text: 'Practical use of AI coding tools and agentic workflows for planning, implementation, test generation, refactoring, documentation, and review while keeping engineering judgment in control.',
+  },
+];
+
+const projects = [
+  {
+    title: 'Telecom-grade backend systems',
+    summary: 'Backend engineering for network-function platforms where software quality, deployment control, and clear integration contracts matter.',
+    details:
+      'Experience covers 5G Core concepts, signaling-oriented backend services, Java and RxJava, Cassandra, YANG models, Docker, Kubernetes, Helm, Jenkins, CI/CD, automated tests, and customer-facing technical documentation.',
+    tags: ['5G Core', 'Java', 'RxJava', 'Cassandra', 'Kubernetes', 'Helm'],
+  },
+  {
+    title: 'Open network API platforms',
+    summary: 'API and platform work for network experimentation, standards-oriented integration, and reproducible technical workflows.',
+    details:
+      'Work includes FastAPI services, Pytest-based workflows, Docker and docker-compose environments, CAMARA-style open network API concepts, Open5GS and PacketRusher experiments, Network Exposure Function concepts, CAPIF concepts, and technical review of 3GPP-oriented specifications.',
+    tags: ['CAMARA', 'FastAPI', 'Pytest', 'Open5GS', 'PacketRusher', 'NEF'],
+  },
+  {
+    title: 'Backend modernization and quality',
+    summary: 'Modernization and maintenance of software systems in environments where quality, integration testing, and deployment control are important.',
+    details:
+      'Experience includes Spring Boot backend services, Java EE application maintenance, Spring Test coverage, integration tests, deployment support, quality feedback loops, and reliability work around security-sensitive software.',
+    tags: ['Spring Boot', 'Java EE', 'Spring Test', 'Integration Testing', 'WildFly'],
+  },
+  {
+    title: 'Engineering delivery acceleration',
+    summary: 'Use of modern AI-assisted and agentic coding workflows as a software delivery multiplier, not as a replacement for engineering discipline.',
+    details:
+      'Applied carefully, AI-assisted workflows can shorten feedback loops for implementation planning, code exploration, refactoring, test generation, documentation, and review while keeping architecture, security, and maintainability explicit.',
+    tags: ['AI-assisted Development', 'Code Review', 'Test Generation', 'Refactoring', 'Documentation'],
+  },
+];
+
+const stackGroups: Array<[string, string[]]> = [
+  ['Backend', ['Java', 'RxJava', 'Spring Boot', 'Python', 'FastAPI', 'Java EE']],
+  ['Cloud and platform', ['Docker', 'Kubernetes', 'Helm', 'docker-compose', 'Linux']],
+  ['Data and integration', ['Cassandra', 'MongoDB', 'YANG models', 'REST/HTTP', 'Microservices']],
+  ['Delivery and quality', ['Jenkins', 'CI/CD', 'Pytest', 'Spring Test', 'JUnit', 'TestNG']],
+  ['Telecom specialization', ['5G Core', 'CAMARA', 'NEF', 'CAPIF', 'Open5GS', 'PacketRusher', 'B5G/6G']],
+  ['Engineering workflow', ['AI-assisted development', 'Agentic coding workflows', 'Code review', 'Test generation', 'Documentation']],
+];
+
+const helpAreas = [
+  {
+    title: 'Move prototypes toward production',
+    text: 'Clarify service boundaries, make APIs testable, containerize the runtime, and turn promising technical work into deployable software.',
+  },
+  {
+    title: 'Unblock backend and platform delivery',
+    text: 'Support implementation, integration, CI/CD hardening, Kubernetes packaging, and technical execution alongside existing engineering teams.',
+  },
+  {
+    title: 'Support standards-aware technical work',
+    text: 'Bring practical software engineering to standards-aware, research-oriented, and platform contexts where specifications and integration constraints matter.',
+  },
+  {
+    title: 'Shorten feedback loops with AI-assisted delivery',
+    text: 'Apply AI-assisted development where it helps: technical exploration, implementation planning, test coverage, refactoring, documentation, and review.',
+  },
+];
+
+const credentials = [
+  {
+    title: 'Certified Kubernetes Application Developer',
+    meta: 'CKAD, August 2024',
+    text: 'Kubernetes application design, deployment, configuration, observability, and troubleshooting foundations.',
+  },
+  {
+    title: 'Integrated Master in Electrical and Computer Engineering',
+    meta: 'Grade 7.76/10',
+    text: 'Engineering background across computer systems, networks, software, and telecommunications.',
+  },
+  {
+    title: 'Software Defined Networks thesis',
+    meta: 'ONOS, P4, and SDN',
+    text: 'Thesis work on ONOS controller compatibility with the P4 programming language for Software Defined Networks.',
+  },
+  {
+    title: 'Publication topics',
+    meta: 'Open network APIs and B5G/6G systems',
+    text: 'Peer-reviewed work around CAMARA-style open network APIs, 3GPP NEF concepts, location reporting, network openness, and telecom experimentation.',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Panagiotis Pavlidis provides technical consulting for teams building reliable software systems, backend APIs, cloud-native platforms, and telecom-grade integrations."
+    />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" type="image/svg+xml" href={assetPath('favicon.svg')} />
+    <title>Panagiotis Pavlidis | Backend & Cloud Consultant</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="#top" aria-label="Panagiotis Pavlidis home">
+            <span class="brand-mark">PP</span>
+            <span>
+              Panagiotis Pavlidis
+              <small>Backend & Cloud Consultant</small>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">
+            <span class="menu-icon" aria-hidden="true"></span>
+            <span class="sr-only">Open menu</span>
+          </button>
+          <div class="nav-links" id="nav-links" data-open="false">
+            {navItems.map(([label, href]) => <a href={href}>{label}</a>)}
+          </div>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="hero container" id="top">
+          <div data-reveal>
+            <p class="eyebrow">Technical consulting</p>
+            <h1>Reliable software systems for technical teams.</h1>
+            <p class="lead">
+              Backend, cloud, and integration consulting for teams that need maintainable APIs,
+              production-ready platforms, and software engineering discipline across complex
+              domains.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Discuss a technical challenge</a>
+              <a class="button" href="#services">Explore consulting areas</a>
+            </div>
+            <div class="hero-meta" aria-label="Professional focus areas">
+              <div class="metric">
+                <strong>Backend</strong>
+                <span>APIs and services</span>
+              </div>
+              <div class="metric">
+                <strong>Cloud</strong>
+                <span>Kubernetes delivery</span>
+              </div>
+              <div class="metric">
+                <strong>Telecom</strong>
+                <span>Specialized systems context</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="profile-panel" data-reveal aria-label="Profile photo area">
+            <img
+              src={assetPath('profile-photo.jpg')}
+              width="400"
+              height="400"
+              alt="Portrait of Panagiotis Pavlidis"
+              loading="eager"
+            />
+            <div class="availability">
+              <strong>Available for technical consulting</strong>
+              <span>Architecture, backend implementation, cloud delivery, and integration support.</span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section alt" id="services">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Consulting Areas</p>
+              <h2>Software engineering support for systems that need to hold up.</h2>
+              <p>
+                Practical consulting for teams that need clear architecture, maintainable
+                implementation, cloud-native delivery, and disciplined engineering workflows.
+              </p>
+            </div>
+            <div class="grid services-grid">
+              {services.map((service) => (
+                <article class="card" data-reveal>
+                  <div class="card-icon" aria-hidden="true">{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Proof Areas</p>
+              <h2>Experience-backed capabilities across software systems.</h2>
+              <p>
+                Experience is grouped by technical capability instead of company names or a
+                chronological resume. Telecom is a specialization, not the boundary of the work.
+              </p>
+            </div>
+            <div class="grid projects-grid">
+              {projects.map((project, index) => (
+                <details class="project-card" data-reveal open={index === 0}>
+                  <summary>
+                    <span>
+                      <h3>{project.title}</h3>
+                      <p>{project.summary}</p>
+                    </span>
+                  </summary>
+                  <div class="details">
+                    <p>{project.details}</p>
+                    <ul class="tags" aria-label={`${project.title} technologies`}>
+                      {project.tags.map((tag) => <li class="chip">{tag}</li>)}
+                    </ul>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section alt" id="help">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">How I Help</p>
+              <h2>From architecture and prototypes to deployable software.</h2>
+              <p>
+                Engagements can be narrow and implementation-heavy or broader across architecture,
+                delivery workflows, and integration constraints.
+              </p>
+            </div>
+            <div class="grid help-grid">
+              {helpAreas.map((area) => (
+                <article class="card" data-reveal>
+                  <h3>{area.title}</h3>
+                  <p>{area.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="stack">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Tech Stack</p>
+              <h2>Tools and practices for software engineering delivery.</h2>
+              <p>
+                A backend-first stack with cloud-native delivery, integration depth, automated
+                quality checks, telecom specialization, and AI-assisted engineering workflows used
+                carefully as a delivery multiplier.
+              </p>
+            </div>
+            <div class="grid stack-grid">
+              {stackGroups.map(([title, items]) => (
+                <article class="stack-group" data-reveal>
+                  <h3>{title}</h3>
+                  <ul class="stack-list">
+                    {items.map((item) => <li>{item}</li>)}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section alt" id="credentials">
+          <div class="container">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Credentials</p>
+              <h2>Signals behind the consulting work.</h2>
+              <p>
+                Formal engineering background, Kubernetes certification, network systems research,
+                and publication topics that support practical software engineering and platform
+                work.
+              </p>
+            </div>
+            <div class="grid credential-grid">
+              {credentials.map((credential) => (
+                <article class="credential-card" data-reveal>
+                  <span>{credential.meta}</span>
+                  <h3>{credential.title}</h3>
+                  <p>{credential.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="container about-grid">
+            <div class="section-header" data-reveal>
+              <p class="eyebrow">Consultant Profile</p>
+              <h2>Backend and cloud engineering with implementation depth.</h2>
+            </div>
+            <div class="about-panel" data-reveal>
+              <div class="about-copy">
+                <p>
+                  Panagiotis Pavlidis helps technical teams clarify architecture, implement
+                  reliable services, improve deployment models, and move complex backend work toward
+                  software that can be tested, shipped, and operated.
+                </p>
+                <p>
+                  The focus is backend and cloud delivery with telecom-grade systems context:
+                  service boundaries, integration quality, Kubernetes packaging, CI/CD feedback
+                  loops, standards-aware implementation, and pragmatic use of AI-assisted
+                  development practices.
+                </p>
+              </div>
+              <ul class="about-list">
+                <li><span>01</span> Software systems with clear contracts and maintainable boundaries.</li>
+                <li><span>02</span> Cloud-native delivery using containers, Kubernetes, Helm, and CI/CD.</li>
+                <li><span>03</span> AI-assisted development used to improve delivery, testing, review, and documentation.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section alt" id="contact">
+          <div class="container">
+            <div class="contact-panel" data-reveal>
+              <div>
+                <p class="eyebrow">Contact</p>
+                <h2>Bring a software, backend, cloud, or delivery challenge.</h2>
+                <p>
+                  Share the system context, constraints, and delivery goal. I help technical teams
+                  move from architecture and prototypes to reliable, deployable software.
+                </p>
+                <div class="contact-actions">
+                  <a class="button primary" href="mailto:panpavlidis98@gmail.com">Email Panagiotis</a>
+                  <a class="button" href="https://linkedin.com/in/p-pavlidis" rel="noreferrer">LinkedIn</a>
+                  <a class="button" href="https://github.com/panos-ece" rel="noreferrer">GitHub</a>
+                </div>
+              </div>
+              <ul class="contact-list" aria-label="Consulting focus">
+                <li><a href="mailto:panpavlidis98@gmail.com"><span>Email</span><strong>panpavlidis98@gmail.com</strong></a></li>
+                <li><a href="https://linkedin.com/in/p-pavlidis" rel="noreferrer"><span>LinkedIn</span><strong>p-pavlidis</strong></a></li>
+                <li><a href="https://github.com/panos-ece" rel="noreferrer"><span>GitHub</span><strong>panos-ece</strong></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <span>© {new Date().getFullYear()} Panagiotis Pavlidis</span>
+          <span>Software engineering, backend, cloud, and integration consulting.</span>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('#nav-links');
+
+      menuButton?.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        navLinks?.setAttribute('data-open', String(!isOpen));
+        document.body.classList.toggle('menu-open', !isOpen);
+      });
+
+      navLinks?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuButton?.setAttribute('aria-expanded', 'false');
+          navLinks.setAttribute('data-open', 'false');
+          document.body.classList.remove('menu-open');
+        });
+      });
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.14 }
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+    </script>
+  </body>
+</html>
