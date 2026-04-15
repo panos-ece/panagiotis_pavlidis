@@ -3,6 +3,12 @@ import '../styles/global.css';
 
 const basePath = import.meta.env.BASE_URL;
 const assetPath = (path: string) => `${basePath}${basePath.endsWith('/') ? '' : '/'}${path}`;
+const siteUrl = 'https://panos-ece.github.io';
+const canonicalUrl = `${siteUrl}${basePath}${basePath.endsWith('/') ? '' : '/'}`;
+const pageTitle = 'Panagiotis Pavlidis | Software Engineering, Backend & Cloud Consultant';
+const pageDescription =
+  'Technical consulting for teams building reliable software systems, backend APIs, cloud-native platforms, Kubernetes delivery workflows, and telecom-grade integrations.';
+const socialImageUrl = new URL(assetPath('profile-photo.jpg'), siteUrl).toString();
 
 const navItems = [
   ['Services', '#services'],
@@ -129,16 +135,29 @@ const credentials = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Panagiotis Pavlidis provides technical consulting for teams building reliable software systems, backend APIs, cloud-native platforms, and telecom-grade integrations."
-    />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Panagiotis Pavlidis Consulting" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Portrait of Panagiotis Pavlidis" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="Portrait of Panagiotis Pavlidis" />
     <script is:inline>
       document.documentElement.classList.add('js');
     </script>
     <meta name="theme-color" content="#07111f" />
     <link rel="icon" type="image/svg+xml" href={assetPath('favicon.svg')} />
-    <title>Panagiotis Pavlidis | Backend & Cloud Consultant</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
