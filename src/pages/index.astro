@@ -8,6 +8,8 @@ const canonicalUrl = `${siteUrl}${basePath}${basePath.endsWith('/') ? '' : '/'}`
 const pageTitle = 'Panagiotis Pavlidis | Software Engineering, Backend & Cloud Consultant';
 const pageDescription =
   'Technical consulting for teams building reliable software systems, backend APIs, cloud-native platforms, Kubernetes delivery workflows, and telecom-grade integrations.';
+const pageKeywords =
+  'Panagiotis Pavlidis, software engineering consultant, backend engineering consultant, cloud consultant, backend APIs, cloud-native platforms, Kubernetes delivery, Java Spring Boot, Python FastAPI, CI/CD, telecom-grade systems, CAMARA open network APIs, 5G Core, AI-assisted software engineering';
 const socialImageUrl = new URL(assetPath('profile-photo.jpg'), siteUrl).toString();
 
 const navItems = [
@@ -137,7 +139,9 @@ const credentials = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href={assetPath('sitemap-index.xml')} />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Panagiotis Pavlidis Consulting" />
