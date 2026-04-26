@@ -264,6 +264,17 @@ h3 {
   font-size: clamp(1.04rem, 2vw, 1.25rem);
 }
 
+.name-variants {
+  max-width: 720px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.name-variants strong {
+  color: var(--text);
+}
+
 .hero-actions,
 .contact-actions {
   display: flex;
