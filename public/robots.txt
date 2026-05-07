@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://panos-ece.github.io/panagiotis_pavlidis/sitemap-index.xml
+Sitemap: https://panos-ece.github.io/panagiotis_pavlidis/sitemap.xml
