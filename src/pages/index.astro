@@ -5,52 +5,12 @@ const basePath = import.meta.env.BASE_URL;
 const assetPath = (path: string) => `${basePath}${basePath.endsWith('/') ? '' : '/'}${path}`;
 const siteUrl = 'https://panos-ece.github.io';
 const canonicalUrl = `${siteUrl}${basePath}${basePath.endsWith('/') ? '' : '/'}`;
-const pageTitle =
-  'Panagiotis Pavlidis | Παναγιώτης Παυλίδης | Backend, Cloud & Software Engineering Consultant';
+const pageTitle = 'Panagiotis Pavlidis | Software Engineering, Backend & Cloud Consultant';
 const pageDescription =
-  'Panagiotis Pavlidis (Παναγιώτης Παυλίδης) is a backend, cloud, and software engineering consultant focused on reliable APIs, Kubernetes delivery, integration-heavy systems, and telecom-grade platforms.';
+  'Technical consulting for teams building reliable software systems, backend APIs, cloud-native platforms, Kubernetes delivery workflows, and telecom-grade integrations.';
 const pageKeywords =
-  'Panagiotis Pavlidis, Παναγιώτης Παυλίδης, Panos Pavlidis, software engineering consultant, backend engineering consultant, cloud consultant, backend APIs, cloud-native platforms, Kubernetes delivery, Java Spring Boot, Python FastAPI, CI/CD, telecom-grade systems, CAMARA open network APIs, 5G Core, AI-assisted software engineering';
+  'Panagiotis Pavlidis, software engineering consultant, backend engineering consultant, cloud consultant, backend APIs, cloud-native platforms, Kubernetes delivery, Java Spring Boot, Python FastAPI, CI/CD, telecom-grade systems, CAMARA open network APIs, 5G Core, AI-assisted software engineering';
 const socialImageUrl = new URL(assetPath('profile-photo.jpg'), siteUrl).toString();
-const linkedInUrl = 'https://linkedin.com/in/p-pavlidis';
-const githubUrl = 'https://github.com/panos-ece';
-const emailAddress = 'panpavlidis98@gmail.com';
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': `${canonicalUrl}#person`,
-  name: 'Panagiotis Pavlidis',
-  alternateName: ['Παναγιώτης Παυλίδης', 'Panos Pavlidis'],
-  url: canonicalUrl,
-  image: socialImageUrl,
-  jobTitle: 'Backend, Cloud and Software Engineering Consultant',
-  description: pageDescription,
-  sameAs: [linkedInUrl, githubUrl],
-  email: `mailto:${emailAddress}`,
-  knowsAbout: [
-    'Backend engineering',
-    'Cloud-native platforms',
-    'Kubernetes',
-    'Software architecture',
-    'Telecom systems',
-    '5G Core',
-    'CAMARA open network APIs',
-    'AI-assisted software engineering',
-  ],
-};
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': `${canonicalUrl}#website`,
-  url: canonicalUrl,
-  name: 'Panagiotis Pavlidis Consulting',
-  alternateName: ['Panagiotis Pavlidis', 'Παναγιώτης Παυλίδης'],
-  description: pageDescription,
-  inLanguage: ['en', 'el'],
-  about: {
-    '@id': `${canonicalUrl}#person`,
-  },
-};
 
 const navItems = [
   ['Services', '#services'],
@@ -180,13 +140,8 @@ const credentials = [
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <meta name="keywords" content={pageKeywords} />
-    <meta name="author" content="Panagiotis Pavlidis" />
-    <meta name="creator" content="Panagiotis Pavlidis" />
-    <meta name="publisher" content="Panagiotis Pavlidis" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href={assetPath('sitemap-index.xml')} />
-    <link rel="me" href={linkedInUrl} />
-    <link rel="me" href={githubUrl} />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Panagiotis Pavlidis Consulting" />
@@ -205,8 +160,6 @@ const credentials = [
     <script is:inline>
       document.documentElement.classList.add('js');
     </script>
-    <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
     <meta name="theme-color" content="#07111f" />
     <link rel="icon" type="image/svg+xml" href={assetPath('favicon.svg')} />
   </head>
@@ -235,15 +188,12 @@ const credentials = [
       <main id="main">
         <section class="hero container" id="top">
           <div data-reveal>
-            <p class="eyebrow">Panagiotis Pavlidis | Παναγιώτης Παυλίδης</p>
-            <h1>Panagiotis Pavlidis is a backend and cloud consultant for reliable software systems.</h1>
+            <p class="eyebrow">Technical consulting</p>
+            <h1>Reliable software systems for technical teams.</h1>
             <p class="lead">
-              Panagiotis Pavlidis (Παναγιώτης Παυλίδης) helps technical teams build maintainable
-              APIs, production-ready platforms, and disciplined software delivery across backend,
-              cloud, integration, and telecom-heavy domains.
-            </p>
-            <p class="name-variants">
-              Also known as <strong>Panos Pavlidis</strong> in English and <strong>Παναγιώτης Παυλίδης</strong> in Greek.
+              Backend, cloud, and integration consulting for teams that need maintainable APIs,
+              production-ready platforms, and software engineering discipline across complex
+              domains.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#contact">Discuss a technical challenge</a>
@@ -405,19 +355,14 @@ const credentials = [
           <div class="container about-grid">
             <div class="section-header" data-reveal>
               <p class="eyebrow">Consultant Profile</p>
-              <h2>Who is Panagiotis Pavlidis?</h2>
+              <h2>Backend and cloud engineering with implementation depth.</h2>
             </div>
             <div class="about-panel" data-reveal>
               <div class="about-copy">
                 <p>
-                  Panagiotis Pavlidis is a software engineer and consultant focused on backend
-                  systems, cloud delivery, and implementation-heavy technical work. In Greek, his
-                  name is written as Παναγιώτης Παυλίδης.
-                </p>
-                <p>
                   Panagiotis Pavlidis helps technical teams clarify architecture, implement
-                  reliable services, improve deployment models, and move complex backend work
-                  toward software that can be tested, shipped, and operated.
+                  reliable services, improve deployment models, and move complex backend work toward
+                  software that can be tested, shipped, and operated.
                 </p>
                 <p>
                   The focus is backend and cloud delivery with telecom-grade systems context:
@@ -446,15 +391,15 @@ const credentials = [
                   move from architecture and prototypes to reliable, deployable software.
                 </p>
                 <div class="contact-actions">
-                  <a class="button primary" href={`mailto:${emailAddress}`}>Email Panagiotis</a>
-                  <a class="button" href={linkedInUrl} rel="me noreferrer">LinkedIn</a>
-                  <a class="button" href={githubUrl} rel="me noreferrer">GitHub</a>
+                  <a class="button primary" href="mailto:panpavlidis98@gmail.com">Email Panagiotis</a>
+                  <a class="button" href="https://linkedin.com/in/p-pavlidis" rel="noreferrer">LinkedIn</a>
+                  <a class="button" href="https://github.com/panos-ece" rel="noreferrer">GitHub</a>
                 </div>
               </div>
               <ul class="contact-list" aria-label="Consulting focus">
-                <li><a href={`mailto:${emailAddress}`}><span>Email</span><strong>{emailAddress}</strong></a></li>
-                <li><a href={linkedInUrl} rel="me noreferrer"><span>LinkedIn</span><strong>p-pavlidis</strong></a></li>
-                <li><a href={githubUrl} rel="me noreferrer"><span>GitHub</span><strong>panos-ece</strong></a></li>
+                <li><a href="mailto:panpavlidis98@gmail.com"><span>Email</span><strong>panpavlidis98@gmail.com</strong></a></li>
+                <li><a href="https://linkedin.com/in/p-pavlidis" rel="noreferrer"><span>LinkedIn</span><strong>p-pavlidis</strong></a></li>
+                <li><a href="https://github.com/panos-ece" rel="noreferrer"><span>GitHub</span><strong>panos-ece</strong></a></li>
               </ul>
             </div>
           </div>
